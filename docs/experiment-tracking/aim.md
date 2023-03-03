@@ -7,6 +7,8 @@
 
 ## How to integrate Aim 
 
+Huge thanks to the Aim team (Gor, Gev, Mahnerak) for helping me see why I was creating a run in the Aim UI for each GPU, and how I could resolve it by checking if the current process was the 'main' process.
+
 * You need use a hook
 ```
 from detectron2.engine import HookBase
