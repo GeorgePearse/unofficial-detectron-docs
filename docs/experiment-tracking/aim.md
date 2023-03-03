@@ -61,3 +61,8 @@ class AimHook(HookBase):
             with open(os.path.join(self.cfg.OUTPUT_DIR, "model-config.yaml"), "w") as f:
                 f.write(self.cfg.dump())
 ```
+
+You then need to register this hook with your trainer 
+
+aim_hook = AimHook(cfg) # feeding through the cfg object in order to track hyperparameters
+trainer.register_hooks([aim_hook])
